@@ -22,11 +22,12 @@ const handleRetirementClick = () => {
 
 const handleBackClick = () => {
     // Handle back button click
+    setSelectedAccountType(null);
     console.log('Back button clicked');
 };
 
 if (selectedAccountType === 'individual') {
-    return <IndividualStrategies />;
+    return <IndividualStrategies onBack={handleBackClick} />;
 }
 
 

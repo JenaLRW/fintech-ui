@@ -1,7 +1,11 @@
 import React from 'react';
 import './IndividualStrategies.css';
 
-const IndividualStrategies: React.FC = () => {
+interface Props {
+  onBack: () => void;
+}
+
+const IndividualStrategies: React.FC<Props> = ({ onBack }) => {
   const handleConservativeClick = () => {
     // Handle Conservative strategy selection
     console.log('Conservative strategy selected');
@@ -62,7 +66,7 @@ const IndividualStrategies: React.FC = () => {
       </div>
       <button 
         className="back-button"
-        onClick={handleBackClick}
+        onClick={onBack}
       >
         ← Back
       </button>
