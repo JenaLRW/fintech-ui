@@ -1,6 +1,7 @@
 import React from 'react';
 import './onboarding.css';
 import IndividualStrategies from './IndividualStrategies';
+import RetirementSelection from './RetirementSelection';
 
 
 const Onboarding: React.FC = () => {
@@ -28,6 +29,9 @@ const handleBackClick = () => {
 
 if (selectedAccountType === 'individual') {
     return <IndividualStrategies onBack={handleBackClick} />;
+}
+if (selectedAccountType === 'retirement') {
+    return <RetirementSelection onBack={handleBackClick} />;
 }
 
 

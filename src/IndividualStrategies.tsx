@@ -21,10 +21,6 @@ const IndividualStrategies: React.FC<Props> = ({ onBack }) => {
     console.log('Aggressive strategy selected');
   };
 
-  const handleBackClick = () => {
-    // Handle back navigation to onboarding
-    console.log('Back to onboarding');
-  };
 
   return (
     <div className="individual-strategies-container">
